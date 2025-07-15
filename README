@@ -82,29 +82,17 @@ Este proyecto implementa una API RESTful destinada a la gestión de foros de dis
 
 ---
 
-## ☁️ Comandos para subir este proyecto a GitHub desde la consola
+## 📚 Documentación adicional
+- [Guía de Spring Boot](https://spring.io/projects/spring-boot)
+- [Documentación de Spring Security](https://docs.spring.io/spring-security/site/docs/current/reference/html5/)
+- [Referencia de JWT](https://jwt.io/introduction/)     
+- [Tutorial de MySQL](https://dev.mysql.com/doc/)
+- [Guía de Alura Latam](https://www.aluracursos.com/)
 
-```bash
-git init
-git remote add origin https://github.com/ariel323/talkspace-backend.git
-git add .
-git commit -m "Proyecto inicial Foro Backend"
-git branch -M main
-git push -u origin main
-```
+-----
 
----
+## 📌 Contribucione
 
-📌 **Autor del proyecto:**  
-Desarrollado por `ariel323` como parte del challenge de Alura Latam.
-   git commit -m "Proyecto inicial Foro Backend"
-   ```
-
-4. Sube los cambios a la rama principal (`main`):
-   ```bash
-   git branch -M main
-   git push -u origin main
-   ```
 
 ---
 

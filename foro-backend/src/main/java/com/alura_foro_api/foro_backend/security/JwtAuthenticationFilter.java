@@ -20,7 +20,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                                     FilterChain filterChain)
             throws ServletException, IOException {
 
-        String path = request.getRequestURI().toLowerCase();
+        String path = request.getRequestURI();
 
         if (
             path.startsWith("/auth/login") ||

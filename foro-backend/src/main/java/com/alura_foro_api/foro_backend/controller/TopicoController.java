@@ -100,6 +100,6 @@ public class TopicoController {
             return ResponseEntity.notFound().build();
         }
         topicoRepository.deleteById(id);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.ok("Tópico eliminado correctamente");
     }
 }
