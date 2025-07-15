@@ -1,0 +1,113 @@
+# 🧠 Foro Backend — API RESTful con Spring Boot
+
+Este proyecto implementa una API RESTful destinada a la gestión de foros de discusión, desarrollada como parte del challenge de **Alura Latam**. Permite registrar usuarios, autenticarse mediante JWT y administrar tópicos relacionados con diversas tecnologías, fomentando el intercambio técnico y la colaboración.
+
+## 🚀 Funcionalidades destacadas
+
+- **Gestión de usuarios**:
+  - Registro y login con almacenamiento seguro de contraseñas mediante hashing.
+  - Autenticación y autorización basada en tokens JWT.
+
+- **Manejo de tópicos**:
+  - CRUD completo: crear, listar, buscar, actualizar y eliminar temas de discusión.
+  - Paginación y filtrado por título y autor.
+
+- **Persistencia de datos**:
+  - Integración con **MySQL** usando **Spring Data JPA**.
+  - Manejo seguro de variables sensibles mediante variables de entorno.
+
+- **Robustez y seguridad**:
+  - Protección de endpoints mediante Spring Security + JWT.
+  - Respuestas estandarizadas en formato JSON ante errores de validación o excepciones.
+
+## 📦 Endpoints principales
+
+| Método | Ruta | Descripción |
+|--------|------|-------------|
+| `POST` | `/auth/register` | Registro de usuario (retorna token JWT) |
+| `POST` | `/auth/login` | Login de usuario (retorna token JWT) |
+| `GET`  | `/auth/topicos/buscar?titulo=...&autor=...` | Búsqueda de tópicos (requiere JWT) |
+| `GET`  | `/topicos` | Listado paginado de tópicos (requiere JWT) |
+| `POST` | `/topicos` | Crear nuevo tópico (requiere JWT) |
+| `PUT`  | `/topicos/{id}` | Actualizar tópico existente (requiere JWT) |
+| `DELETE` | `/topicos/{id}` | Eliminar tópico (requiere JWT) |
+
+## 🔐 Seguridad
+
+- Endpoints `/auth/register` y `/auth/login` son públicos.
+- Todos los demás requieren autenticación vía token JWT:
+  ```
+  Authorization: Bearer <tu_token>
+  ```
+
+## 💬 Ejemplo de tópicos registrados
+
+```json
+[
+  {
+    "titulo": "¿Cómo usar JWT en Spring Boot?",
+    "mensaje": "¿Alguien puede explicar cómo implementar autenticación JWT en un proyecto Spring Boot?",
+    "autor": "ariel",
+    "curso": "Java",
+    "estado": "ABIERTO",
+    "fechaCreacion": "2025-07-13T19:45:39.941064"
+  },
+  ...
+]
+```
+
+## 🔧 Estructura del proyecto
+
+- `controller/` → Controladores REST
+- `model/` → Entidades JPA
+- `repository/` → Interfaces de acceso a datos
+- `security/` → Configuración de seguridad y utilidades JWT
+- `exception/` → Manejo global de errores
+- `dto/` → Objetos de transferencia de datos
+
+## 🛠️ Tecnologías empleadas
+
+- **Java 17**
+- **Spring Boot 3.x**
+- **Spring Data JPA**
+- **Spring Security + JWT**
+- **MySQL**
+- **Maven**
+
+## ▶️ Cómo ejecutar
+
+1. Configurar variables de entorno (credenciales DB, claves JWT, etc.).
+2. Levantar el proyecto con Maven (`mvn spring-boot:run`) o desde tu IDE.
+3. Probar los endpoints utilizando herramientas como Postman o Insomnia.
+
+---
+
+## ☁️ Comandos para subir este proyecto a GitHub desde la consola
+
+```bash
+git init
+git remote add origin https://github.com/ariel323/talkspace-backend.git
+git add .
+git commit -m "Proyecto inicial Foro Backend"
+git branch -M main
+git push -u origin main
+```
+
+---
+
+📌 **Autor del proyecto:**  
+Desarrollado por `ariel323` como parte del challenge de Alura Latam.
+   git commit -m "Proyecto inicial Foro Backend"
+   ```
+
+4. Sube los cambios a la rama principal (`main`):
+   ```bash
+   git branch -M main
+   git push -u origin main
+   ```
+
+---
+
+📌 **Autor del proyecto:**  
+Desarrollado por `ariel323` como parte del challenge de Alura Latam.
+
