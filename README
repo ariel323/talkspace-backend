@@ -1,12 +1,23 @@
+<<<<<<< HEAD
 # 🧠 TalkSpace Backend — API RESTful con Spring Boot
 
 [![Java](https://img.shields.io/badge/Java-17-orange)](https://www.oracle.com/java/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.3-green)](https://spring.io/projects/spring-boot)
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)](https://www.mysql.com/)
 [![JWT](https://img.shields.io/badge/JWT-Auth-red)](https://jwt.io/)
+=======
+
+🧠 Foro Backend — API RESTful con Spring Boot
+Este proyecto implementa una API RESTful utilizando Spring Boot, desarrollada como parte del challenge de Alura Latam. La aplicación permite gestionar un foro de discusión técnica, incluyendo el registro y autenticación de usuarios mediante JWT, así como la administración completa de tópicos relacionados con diversas tecnologías.
+
+🚀 Funcionalidades Principales
+👤 Gestión de Usuarios
+Registro de nuevos usuarios con almacenamiento seguro de contraseñas (hashing).
+>>>>>>> 713b9baa4283964e643d2e2c1d24d7382eb2008f
 
 ## 📝 Descripción
 
+<<<<<<< HEAD
 **TalkSpace Backend** es una API RESTful robusta desarrollada con Spring Boot para gestionar un foro de discusión técnica. Esta aplicación forma parte del challenge de Alura Latam y proporciona un sistema completo de gestión de usuarios y tópicos con autenticación JWT, documentación interactiva con Swagger, sistema de caché, y búsquedas avanzadas.
 
 ## 🌟 Características Destacadas
@@ -115,11 +126,45 @@ Authorization: Bearer <tu_token_jwt>
 
 **Request Body:**
 ```json
+=======
+🗨️ Administración de Tópicos
+Operaciones completas de CRUD: creación, lectura, actualización y eliminación de tópicos.
+
+Paginación y filtrado por título o autor.
+
+🗃️ Persistencia de Datos
+Integración con MySQL utilizando Spring Data JPA.
+
+Manejo seguro de credenciales y variables sensibles mediante variables de entorno.
+
+🔐 Seguridad y Robustez
+Protección de endpoints mediante Spring Security y autenticación basada en JWT.
+
+Respuestas estandarizadas en formato JSON para errores de validación y manejo de excepciones.
+
+📦 Principales Endpoints
+Método	Ruta	Descripción
+POST	/auth/register	Registro de usuario (retorna token JWT)
+POST	/auth/login	Inicio de sesión (retorna token JWT)
+GET	/auth/topicos/buscar?titulo=...&autor=...	Búsqueda de tópicos por título o autor
+GET	/topicos	Listado paginado de tópicos
+POST	/topicos	Crear un nuevo tópico
+PUT	/topicos/{id}	Actualizar un tópico existente
+DELETE	/topicos/{id}	Eliminar un tópico
+
+📌 Nota: Todos los endpoints, excepto los de autenticación (/auth/register y /auth/login), requieren un token JWT en la cabecera de autorización:
+
+makefile
+Authorization: Bearer <tu_token>
+💬 Ejemplo de Tópico Registrado
+json:
+>>>>>>> 713b9baa4283964e643d2e2c1d24d7382eb2008f
 {
   "nombre": "Juan Pérez",
   "email": "juan@ejemplo.com",
   "password": "miPasswordSeguro123"
 }
+<<<<<<< HEAD
 ```
 
 **Response:**
@@ -155,6 +200,26 @@ Authorization: Bearer <tu_token_jwt>
 
 ### Crear un Tópico
 **Endpoint:** `POST /api/v1/topicos`
+=======
+🧩 Estructura del Proyecto
+pgsql
+├── controller/     → Controladores REST
+├── model/          → Entidades JPA
+├── repository/     → Interfaces de acceso a datos
+├── security/       → Configuración de seguridad y utilidades JWT
+├── exception/      → Manejo global de excepciones
+├── dto/            → Objetos de transferencia de datos
+🛠️ Tecnologías Utilizadas
+.Java 17
+.Spring Boot 3.x
+.Spring Data JPA
+.Spring Security + JWT
+.MySQL
+.Maven
+
+▶️ Cómo Ejecutar el Proyecto
+Configura las variables de entorno necesarias (credenciales de base de datos, claves JWT, etc.).
+>>>>>>> 713b9baa4283964e643d2e2c1d24d7382eb2008f
 
 **Request:**
 ```json
@@ -439,6 +504,7 @@ mvn clean install
 **Opción 1: Con Maven**
 ```bash
 mvn spring-boot:run
+<<<<<<< HEAD
 ```
 
 **Opción 2: Con JAR compilado**
@@ -692,3 +758,19 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 ---
 
 ⭐ **¡Si este proyecto te fue útil, dale una estrella en GitHub!** ⭐
+=======
+O desde tu entorno de desarrollo preferido (por ejemplo, IntelliJ o Eclipse).
+
+📌 Puedes probar los endpoints utilizando herramientas como Postman o Insomnia.
+
+📚 Documentación Adicional
+Guía oficial de Spring Boot
+Documentación de Spring Security
+Introducción a JWT
+Documentación oficial de MySQL
+
+Challenge de Alura Latam
+
+👨‍💻 Autor
+Desarrollado por ariel323 como parte del challenge de Alura Latam.
+>>>>>>> 713b9baa4283964e643d2e2c1d24d7382eb2008f
