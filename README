@@ -1,28 +1,29 @@
-🧠 Foro Backend — API RESTful con Spring Boot
-Este proyecto consiste en la implementación de una API RESTful desarrollada con Spring Boot, como parte del challenge de Alura Latam. La aplicación permite gestionar un foro de discusión técnica, facilitando el registro y autenticación de usuarios mediante JWT, así como la administración de tópicos relacionados con diversas tecnologías.
 
-🚀 Funcionalidades principales
-👤 Gestión de usuarios
+🧠 Foro Backend — API RESTful con Spring Boot
+Este proyecto implementa una API RESTful utilizando Spring Boot, desarrollada como parte del challenge de Alura Latam. La aplicación permite gestionar un foro de discusión técnica, incluyendo el registro y autenticación de usuarios mediante JWT, así como la administración completa de tópicos relacionados con diversas tecnologías.
+
+🚀 Funcionalidades Principales
+👤 Gestión de Usuarios
 Registro de nuevos usuarios con almacenamiento seguro de contraseñas (hashing).
 
 Autenticación y autorización mediante JSON Web Tokens (JWT).
 
-🗨️ Manejo de tópicos
-Funcionalidad completa de CRUD: creación, lectura, actualización y eliminación.
+🗨️ Administración de Tópicos
+Operaciones completas de CRUD: creación, lectura, actualización y eliminación de tópicos.
 
-Paginación y filtrado de tópicos por título o autor.
+Paginación y filtrado por título o autor.
 
-🗃️ Persistencia de datos
+🗃️ Persistencia de Datos
 Integración con MySQL utilizando Spring Data JPA.
 
-Manejo seguro de credenciales y variables sensibles a través de variables de entorno.
+Manejo seguro de credenciales y variables sensibles mediante variables de entorno.
 
-🔐 Seguridad y robustez
-Protección de endpoints mediante Spring Security y JWT.
+🔐 Seguridad y Robustez
+Protección de endpoints mediante Spring Security y autenticación basada en JWT.
 
-Respuestas estandarizadas en formato JSON para errores de validación y excepciones.
+Respuestas estandarizadas en formato JSON para errores de validación y manejo de excepciones.
 
-📦 Principales endpoints
+📦 Principales Endpoints
 Método	Ruta	Descripción
 POST	/auth/register	Registro de usuario (retorna token JWT)
 POST	/auth/login	Inicio de sesión (retorna token JWT)
@@ -32,11 +33,12 @@ POST	/topicos	Crear un nuevo tópico
 PUT	/topicos/{id}	Actualizar un tópico existente
 DELETE	/topicos/{id}	Eliminar un tópico
 
-📌 Todos los endpoints, excepto los de autenticación (/auth/register y /auth/login), requieren un token JWT en la cabecera de autorización:
+📌 Nota: Todos los endpoints, excepto los de autenticación (/auth/register y /auth/login), requieren un token JWT en la cabecera de autorización:
 
+makefile
 Authorization: Bearer <tu_token>
-💬 Ejemplo de tópico registrado
-
+💬 Ejemplo de Tópico Registrado
+json:
 {
   "titulo": "¿Cómo usar JWT en Spring Boot?",
   "mensaje": "¿Alguien puede explicar cómo implementar autenticación JWT en un proyecto Spring Boot?",
@@ -45,45 +47,38 @@ Authorization: Bearer <tu_token>
   "estado": "ABIERTO",
   "fechaCreacion": "2025-07-13T19:45:39.941064"
 }
-🧩 Estructura del proyecto
+🧩 Estructura del Proyecto
+pgsql
 ├── controller/     → Controladores REST
 ├── model/          → Entidades JPA
 ├── repository/     → Interfaces de acceso a datos
 ├── security/       → Configuración de seguridad y utilidades JWT
 ├── exception/      → Manejo global de excepciones
 ├── dto/            → Objetos de transferencia de datos
-🛠️ Tecnologías utilizadas
-Java 17
+🛠️ Tecnologías Utilizadas
+.Java 17
+.Spring Boot 3.x
+.Spring Data JPA
+.Spring Security + JWT
+.MySQL
+.Maven
 
-Spring Boot 3.x
-
-Spring Data JPA
-
-Spring Security + JWT
-
-MySQL
-
-Maven
-
-▶️ Cómo ejecutar el proyecto
+▶️ Cómo Ejecutar el Proyecto
 Configura las variables de entorno necesarias (credenciales de base de datos, claves JWT, etc.).
 
 Ejecuta el proyecto con Maven:
 mvn spring-boot:run
-O desde tu entorno de desarrollo preferido (IDE).
+O desde tu entorno de desarrollo preferido (por ejemplo, IntelliJ o Eclipse).
 
-<<<<<<< HEAD
-## 📚 Documentación adicional
-- [Guía de Spring Boot](https://spring.io/projects/spring-boot)
-- [Documentación de Spring Security](https://docs.spring.io/spring-security/site/docs/current/reference/html5/)
-- [Referencia de JWT](https://jwt.io/introduction/)     
-- [Tutorial de MySQL](https://dev.mysql.com/doc/)
-- [Guía de Alura Latam](https://www.aluracursos.com/)
+📌 Puedes probar los endpoints utilizando herramientas como Postman o Insomnia.
 
+📚 Documentación Adicional
+Guía oficial de Spring Boot
+Documentación de Spring Security
+Introducción a JWT
+Documentación oficial de MySQL
 
-📌 **Autor del proyecto:**  
-Desarrollado por `ariel323` como parte del challenge de Alura Latam.
-=======
-Prueba los endpoints utilizando herramientas como Postman o Insomnia.
->>>>>>> 139d61e71432c23b3933f0db56363e09e822f220
+Challenge de Alura Latam
 
+👨‍💻 Autor
+Desarrollado por ariel323 como parte del challenge de Alura Latam.
